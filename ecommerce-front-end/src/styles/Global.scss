@@ -1,0 +1,102 @@
+// Importación de fuentes
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// Variables de colores (inspirados en la paleta de Offcorss)
+$primary-color: #ffcc00; // Amarillo característico
+$secondary-color: #2c2c2c; // Negro para texto y elementos oscuros
+$background-color: #ffffff; // Gris claro de fondo
+$text-color: #333333; // Gris oscuro para textos
+$accent-color: #ff8800; // Naranja para detalles y botones
+
+// Estilos globales
+body {
+  font-family: 'Poppins', sans-serif; // Fuente principal
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $secondary-color;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1em 0;
+  line-height: 1.6;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-color;
+    text-decoration: underline;
+  }
+}
+
+// Botones
+button {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+}
+
+// Inputs y elementos de formulario
+input, textarea, select {
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid $secondary-color;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 10px;
+  outline: none;
+
+  &:focus {
+    border-color: $primary-color;
+  }
+}
+
+// Clases de utilidades
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 30px;
+}

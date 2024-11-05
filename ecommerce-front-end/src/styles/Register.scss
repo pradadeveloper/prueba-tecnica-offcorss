@@ -1,0 +1,93 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; // Ocupa toda la altura de la pantalla
+  background-image: url('https://www.ccllanogrande.com/templates/yootheme/cache/ccllanogrande-banner-horizontal-offcorss-ae84fe11.png'); // Imagen de fondo
+  background-size: cover;
+  background-position: center;
+  position: relative; // Para que el pseudo-elemento se posicione respecto a este contenedor
+  color: #333; // Color del texto en caso de que sea necesario
+}
+
+.register-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); // Capa gris con opacidad (ajusta la opacidad según lo necesites)
+  z-index: 1; // Para que la capa gris esté encima de la imagen de fondo
+}
+
+.logo-container,
+form {
+  position: relative;
+  z-index: 2; // Para que el contenido esté por encima de la capa gris
+}
+
+.logo-container {
+  width: 300px; 
+  height: 50px;
+  margin: 5px;
+}
+
+form {
+  background-color: #ffffff; // Fondo blanco del formulario
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra sutil
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; // Ancho máximo del formulario
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; // Cambiar a row si quieres los labels al lado de los inputs
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%; // Asegura que el input ocupe todo el ancho disponible
+
+  &:focus {
+    border-color: #ffc107; // Color amarillo
+  }
+}
+
+button {
+  background-color: #ffc107; // Color amarillo
+  color: #fff;
+  margin: 15px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #e0a800; // Amarillo más oscuro al pasar el cursor
+  }
+}
+
+form a,img,h2 {
+  text-align: center;
+}
+
